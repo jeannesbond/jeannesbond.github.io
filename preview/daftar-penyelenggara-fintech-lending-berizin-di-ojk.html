@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="../assets/android-chrome-512x512.png">
+        <meta property="og:title" content="Daftar Penyelenggara Fintech Lending Berizin di OJK - Jeannes Bond">
+        <meta property="og:url" content="https://jeannesbond.github.io/preview/penyelenggara-fintech-lending-berizin-di-ojk.html">
+        <meta property="og:description" content="Daftar Penyelenggara Fintech Lending Berizin di OJK">
+        <meta property="og:site_name" content="Jeannes Bond">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@jeannesbond">
+        <link href="../assets/bootstrap.min.css" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+        <link rel="manifest" href="../assets/site.webmanifest">
+        <title>Daftar Penyelenggara Fintech Lending Berizin di OJK - Jeannes Bond</title>
+	</head>
+	<body>
+		<div class="container font-monospace">
+			<div class="pt-3 border-bottom border-dark">
+				<figure class="text-center text-dark">
+					<blockquote class="blockquote">
+						<p class="h2">Daftar Penyelenggara Fintech Lending Berizin di OJK</p>
+					</blockquote>
+					<figcaption class="blockquote-footer text-dark">
+						per 31 Mei 2024</cite>
+					</figcaption>
+				</figure>
+			</div>
+			<input class="form-control text-center my-3" type="text" id="search" placeholder="Cari..." aria-label="default input example">
+			<div class="table-responsive">
+				<table class="table table-striped table-hover table-bordered" id="table">
+				   <thead>
+					  <tr>
+						 <th scope="col" class="text-center">#</th>
+						 <th scope="col">Nama</th>
+						 <th scope="col">Website</th>
+					  </tr>
+				   </thead>
+				   <tbody class="table-group-divider" id="table-body">
+					  <!-- Table rows will be dynamically generated here -->
+				  </tbody>
+				</table>
+				<div id="no-results" style="display: none;">Tidak ditemukan</div>
+			</div>
+			<script src="../assets/bootstrap.bundle.min.js"></script>
+			<script src="../assets/jquery.min.js"></script>
+			<script>
+				const dataUrl = 'https://raw.githubusercontent.com/jeannesbond/daftar-penyelenggara-fintech-lending-berizin-di-ojk/main/data.json';
+
+				function updateRowNumbers() {
+				   let count = 0;
+				   $('#table-body tr').each(function(index) {
+					  if ($(this).is(':visible')) {
+							count++;
+							$(this).find('td:first').text(count);
+					  }
+				   });
+				}
+		
+				// Fetch data from the external JSON source
+				async function fetchData() {
+					try {
+						const response = await fetch(dataUrl);
+						const jsonData = await response.json();
+		
+						// Render table rows based on fetched data
+						const $tableBody = $('#table-body');
+						$tableBody.empty(); // Clear existing rows
+		
+						jsonData.forEach((item, index) => {
+							const row = `
+								<tr>
+									<td class="text-center">${index + 1}</td>
+									<td>${item.name}</td>
+									<td><a href="${item.website}" class="text-decoration-none">${item.website}</a></td>
+								</tr>
+							`;
+							$tableBody.append(row);
+						});
+		
+						updateRowNumbers();
+					} catch (error) {
+						console.error('Error fetching data:', error);
+					}
+				}
+		
+				// Handle user input
+				$('#search').keyup(function() {
+					const val = $.trim($(this).val()).toLowerCase();
+					const $rows = $('#table-body tr');
+		
+					$rows.show().filter(function() {
+						const text = $(this).find('td:nth-child(2)').text().toLowerCase();
+						return text.indexOf(val) === -1;
+					}).hide();
+		
+					$('#no-results').toggle($rows.filter(':visible').length === 0);
+					updateRowNumbers();
+				});
+		
+				// Initial fetching and rendering
+				fetchData();
+			</script>
+		</div>
+	</body>
+	<footer class="p-2">
+        <div class="container text-center font-monospace border-top border-dark p-1">
+			<div class="mt-1 text-bg-light"><svg xmlns="http://www.w3.org/2000/svg" style="transform: scale(-1,1)" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">   <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/> </svg> Jeannes Bond</div>
+        </div>
+    </footer>
+</html>
