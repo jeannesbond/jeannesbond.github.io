@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="../../../assets/android-chrome-512x512.png">
+        <meta property="og:title" content="Mengakses Notes & Password Manager Tanpa Koneksi Internet - Gus Bryan">
+        <meta property="og:url" content="https://jeannesbond.my.id/blog/2/mengakses-notes-password-tanpa-koneksi-internet">
+        <meta property="og:description" content="Gus Bryan">
+        <meta property="og:site_name" content="Gus Bryan">
+        <meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@jeannesbond">
+        <link rel="stylesheet" type="text/css" href="../../../assets/bootstrap.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16x16.png">
+        <link rel="manifest" href="../../../assets/site.webmanifest">
+		<title>Mengakses Notes & Password Tanpa Koneksi Internet - Gus Bryan</title>
+	</head>
+	<body class="d-flex flex-column vh-100 bg-light">
+		<div class="container font-monospace">
+			<div class="pt-3 border-bottom border-dark">
+				<figure class="text-center text-dark">
+					<blockquote class="blockquote">
+						<p class="h1"><a href="/" class="text-decoration-none text-bg-light">Gus Bryan</a></p>
+					</blockquote>
+					<figcaption class="blockquote-footer text-dark">
+						404</cite>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="d-flex border-bottom border-dark justify-content-center flex-wrap mb-3">
+				<div class="d-inline-flex fs-5 mx-2"><a href="/" class="text-decoration-none text-bg-light">Home</a></div>
+				<div class="d-inline-flex fs-5 mx-2"><a href="https://jeannesbond.my.id/contact.html" class="text-decoration-none text-bg-light">Contact</a></div>
+				<div class="d-inline-flex fs-5 mx-2"><a href="https://jeannesbond.my.id/about.html" class="text-decoration-none text-bg-light">About</a></div>
+			</div>
+			<figure>
+				<blockquote class="blockquote">
+					<p class="h4">Mengakses Notes & Password Tanpa Koneksi Internet</p>
+				</blockquote>
+				<figcaption class="blockquote-footer">21 Juni 2024</figcaption>
+			</figure>
+			<p>Melanjutkan tutorial kemarin tentang <a href="https://jeannesbond.my.id/blog/1/membuat-notes-password-manager-sendiri-dengan-cryptomator-cloudflare-r2" class="text-decoration-none">membuat notes & password manager sendiri dengan Cryptomator dan Cloudflare R2</a>, dimana dibutuhkan koneksi internet untuk bisa mengakses notes & password yang disimpan di cloud. Jadi sekarang saya akan menulis tutorial bagaimana cara agar kita bisa mengakses notes & password tersebut tanpa koneksi internet.</p>
+			<p>Agar kita bisa mengakses notes & password kita tanpa perlu koneksi internet, saya menggunakan aplikasi bernama S3Drive. <a href="https://s3drive.app" class="text-decoration-none">S3Drive</a> adalah aplikasi yang mudah digunakan untuk mengubah back-end apa pun yang kompatibel dengan S3, WebDAV, atau Rclone menjadi penyimpanan file terenkripsi pribadi Anda.</p>
+			<p>S3Drive tersedia untuk Windows, macOS, Linux, Android, iOS, dan Web. S3Drive adalah aplikasi gratis, namun tersedia juga opsi untuk berlangganan maupun sekali beli yang memberi fitur lebih banyak daripada versi gratis. Sekarang kita mulai tutorial bagaimana cara mengakses notes & password kita tanpa koneksi internet dengan S3Drive. Karena saya pengguna ponsel Android, maka saya akan memberikan tutorialnya untuk ponsel Android. Untuk proses ini masih diperlukan koneksi internet ya.</p>
+			<p>Pertama-tama silahkan install aplikasi S3Drive di Play Store. Setelah proses install selesai, buka aplikasi S3Drive dan Anda akan melihat tampilan seperti gambar dibawah ini.</>
+			<img src="s3drive.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Klik <strong>Connect</strong> dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="s3drive-credentials.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Silahkan isi sesuai dengan <a href="https://jeannesbond.my.id/blog/1/membuat-notes-password-manager-sendiri-dengan-cryptomator-cloudflare-r2/created-api-token.png" class="text-decoration-none">API token</a> yang kita buat kemarin untuk mengakses bucket kita di Cloudflare R2 melalui aplikasi pihak ketiga. Bila sudah silahkan <strong>centang privacy & policy</strong> kemudian klik tombol <strong>Connect</strong> dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="s3drive-success.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Kemudian klik tiga garis yang ada di pojok kiri atas dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="s3drive-menu.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Kemudian klik menu <strong>Sync</strong> dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="add-sync.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Kemudian klik tombol <strong>+</strong> di pojok kanan atas dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="configure-sync.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Pada kolom <strong>From</strong> klik tombol <strong>Remote</strong> dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="source-path.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Klik pilihan yang muncul tersebut kemudian pada kolom <strong>To</strong> klik tombol <strong>Local</strong> lalu pilih dimana lokasi yang akan digunakan untuk meletakkan file dari bucket atau cloud nantinya. Disini saya membuat folder baru bernama <strong>S3Drive</strong> untuk meletakkan file saya nantinya. Setelah itu Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="sync-setting.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Untuk pengaturan <strong>Mode</strong>, kita hanya bisa memilih <strong>Copy</strong> karena kita menggunakan S3Drive versi gratis. Untuk pengaturan waktu sinkronisasi biarkan saja 30 menit. Setelah itu klik <strong>Save</strong> dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="sync-success.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>File di cloud akan diunduh oleh S3Drive ke lokasi yang Anda pilih tadi, sehingga nanti kita bisa membuka notes & password kita menggunakan Cryptomator tanpa perlu koneksi internet.</p>
+			<p>Setelah proses sinkronisasi selesai, sekarang buka aplikasi Cryptomator di ponsel lalu klik tombol <strong>+</strong> di pojok kanan bawah kemudian pilih <strong>Add existing vault</strong> dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="vault-option.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Pilih <strong>Local storage</strong> kemudian klik tombol <strong>+</strong> di pojok kanan bawah. Anda akan diminta menentukan lokasi dimana vault Anda berada. Sekarang kita amati gambar dibawah ini.</p>
+			<img src="choose-location.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Silahkan masuk ke folder yang Anda buat tadi, tapi jangan masuk ke folder bucket agar file vault pada bucket bisa kita buka di Cryptomator. Setelah itu klik tombol <strong>Use this folder</strong> dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="folder-chosen.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Klik pilihan yang muncul tersebut kemudian dan Anda akan melihat tampilan seperti gambar dibawah ini.</p>
+			<img src="vault-file.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Pilih <strong>vault.cryptomator</strong> dan Anda akan diarahkan kembali ke halaman utama cryptomator seperti gambar dibawah ini.</p>
+			<img src="cryptomator-dashboard.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Tampak ada 2 pilihan yang sama namun sebenarnya berbeda. <strong>notpad</strong> berlogo ember adalah notes & password kita yang ada di cloud, dimana untuk mengaksesnya dibutuhkan koneksi internet. <strong>notpad</strong> berlogo Android adalah notes & password kita yang ada di lokal (memori ponsel), sehingga bisa diakses tanpa koneksi internet.</p>
+			<p>Sekarang coba pilih <strong>notpad</strong> berlogo Android kemudian masukkan password yang Anda gunakan untuk mengakses notes & password yang ada di cloud. Akan tampil seperti gambar dibawah ini.</p>
+			<img src="decrypted.jpg" class="img-thumbnail mx-auto d-block my-4" loading="lazy">
+			<p>Sekarang kita sudah bisa mengakses notes & password kita secara offline. Namun ada sedikit catatan jika kita mengakses notes & password kita secara offline.</p>
+			<p>Karena kita menggunakan mode <strong>Copy</strong> di S3Drive, maka jika kita menghapus data di cloud, data yang sudah terunduh di lokal tidak ikut terhapus. Itu karena mode <strong>Copy</strong> adalah sinkronisasi satu arah. Berbeda dengan mode <strong>Sync</strong> atau <strong>Two-way</strong> yang ada di S3Drive versi berbayar yang merupakan sinkronisasi dua arah. Perubahan yang dilakukan di salah satu sisi akan ikut mengubah sisi lainnya.</p>
+			<p>Jadi untuk lokal ini kita gunakan hanya sekedar untuk mirroring atau membuka notes & password saja. Untuk melakukan penambahan atau pengurangan notes & password tetap gunakan cloud.</p>
+			<p>Sekian tutorial dari saya, sampai berjumpa di lain waktu.</p>
+			<div id="disqus_thread" class="mt-5"></div>
+			<script>
+				var disqus_config = function () {
+					this.page.url = 'https://jeannesbond.my.id/blog/2/mengakses-notes-password-tanpa-koneksi-internet';
+					this.page.identifier = '2';
+				};
+				(function() {
+					var d = document, s = d.createElement('script');
+					s.src = 'https://jeannesbond.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		</div>
+		<script src="../../../assets/bootstrap.bundle.min.js"></script>
+	</body>
+	<footer class="mt-auto p-2">
+        <div class="container text-center font-monospace border-top border-dark p-1">
+			<div class="mt-1 text-bg-light"><svg xmlns="http://www.w3.org/2000/svg" style="transform: scale(-1,1)" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">   <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/> </svg> Gus Bryan</div>
+        </div>
+    </footer>
+</html>

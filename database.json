@@ -1,5 +1,11 @@
 [
     {
+        "id": 2,
+		"slug": "mengakses-notes-password-tanpa-koneksi-internet",
+        "judul": "Mengakses Notes & Password Tanpa Koneksi Internet",
+        "tanggal": "21 Juni 2024"
+    },
+	{
         "id": 1,
 		"slug": "membuat-notes-password-manager-sendiri-dengan-cryptomator-cloudflare-r2",
         "judul": "Membuat Notes & Password Manager Sendiri dengan Cryptomator & Cloudflare R2",
