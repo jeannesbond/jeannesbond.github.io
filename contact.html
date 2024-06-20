@@ -3,15 +3,11 @@
 	<head>
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="google-site-verification" content="eyMk7HwkLvgOdOO-mhvfaaZccQ1EvjEOILBkpr1kgFE" />
-		<meta name="msvalidate.01" content="69F30B6CF7C799C59DE89EB81E6EE067" />
-		<meta name="yandex-verification" content="d22dd2b93b310cdd" />
-		<link rel="me" href="https://social.vivaldi.net/@jeannesbond">
         <meta property="og:type" content="website" />
         <meta property="og:image" content="./assets/android-chrome-512x512.png">
-        <meta property="og:title" content="Jeannes Bond">
-        <meta property="og:url" content="https://jeannesbond.github.io">
-        <meta property="og:description" content="Jeannes Bond">
+        <meta property="og:title" content="Contact Me">
+        <meta property="og:url" content="https://jeannesbond.github.io/contact.html">
+        <meta property="og:description" content="Contact Me">
         <meta property="og:site_name" content="Jeannes Bond">
         <meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@jeannesbond">
@@ -20,10 +16,9 @@
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
         <link rel="manifest" href="./assets/site.webmanifest">
-		<title>Jeannes Bond</title>
+		<title>Contact Me</title>
 	</head>
 	<body class="d-flex flex-column vh-100 bg-light">
-		<style>.content { display: none; } .noContent { color: #000; background-color: transparent; pointer-events: none; border-style: none; } li { list-style: none; }"</style>
 		<div class="container font-monospace">
 			<div class="pt-3 border-bottom border-dark">
 				<figure class="text-center text-dark">
@@ -36,41 +31,13 @@
 				</figure>
 			</div>
 			<div class="d-flex border-bottom border-dark justify-content-center flex-wrap mb-3">
-				<div class="d-inline-flex fs-5 mx-2 text-decoration-underline"><a href="/" class="text-decoration-none text-bg-light">Home</a></div>
-				<div class="d-inline-flex fs-5 mx-2"><a href="./contact.html" class="text-decoration-none text-bg-light">Contact</a></div>
+				<div class="d-inline-flex fs-5 mx-2"><a href="/" class="text-decoration-none text-bg-light">Home</a></div>
+				<div class="d-inline-flex fs-5 mx-2 text-decoration-underline"><a href="./contact.html" class="text-decoration-none text-bg-light">Contact</a></div>
 				<div class="d-inline-flex fs-5 mx-2"><a href="./about.html" class="text-decoration-none text-bg-light">About</a></div>
 			</div>
-			<ul class="list-group list-group-flush" id="list-group"></ul>
+			<p>Apabila ada perlu dengan saya, silahkan kontak saya melalui <a href="https://utopia.im/jeannesbond" class="text-decoration-none">Utopia</a></p>
 		</div>
 		<script src="./assets/bootstrap.bundle.min.js"></script>
-		<script src="./assets/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$.ajax({
-					type: "GET",
-					url: "database.json",
-					dataType: "json",
-					success: function(data) {
-						$.each(data, function(index, item) {
-							var html = '';
-							html += '<li class="list-group-item content">';
-							html += '<h4><a href="blog/' + item.id + '/' + item.slug + '" class="text-decoration-none text-bg-light">' + item.judul + '</a></h4>';
-							html += '<small>' + item.tanggal + '</small>';
-							html += '</li>';
-							$('#list-group').append(html);
-						});
-						$(".content").slice(0, 3).show();
-						$("#loadMore").on("click", function(e){
-							e.preventDefault();
-							$(".content:hidden").slice(0, 3).slideDown();
-							if($(".content:hidden").length == 0) {
-								$("#loadMore").text("- Semua artikel sudah ditampilkan. -").addClass("noContent");
-							}
-						});
-					}
-				});
-			});
-		</script>
 	</body>
 	<footer class="mt-auto p-2">
         <div class="container text-center font-monospace border-top border-dark p-1">
