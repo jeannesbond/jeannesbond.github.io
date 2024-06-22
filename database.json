@@ -1,5 +1,11 @@
 [
     {
+        "id": 3,
+		"slug": "menghitung-umur-menggunakan-javascript",
+        "judul": "Menghitung Umur Menggunakan JavaScript",
+        "tanggal": "22 Juni 2024"
+    },
+	{
         "id": 2,
 		"slug": "mengakses-notes-password-tanpa-koneksi-internet",
         "judul": "Mengakses Notes & Password Tanpa Koneksi Internet",
