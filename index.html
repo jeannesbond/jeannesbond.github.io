@@ -59,10 +59,10 @@
 							html += '</li>';
 							$('#list-group').append(html);
 						});
-						$(".content").slice(0, 3).show();
+						$(".content").slice(0, 8).show();
 						$("#loadMore").on("click", function(e){
 							e.preventDefault();
-							$(".content:hidden").slice(0, 3).slideDown();
+							$(".content:hidden").slice(0, 8).slideDown();
 							if($(".content:hidden").length == 0) {
 								$("#loadMore").text("- Semua artikel sudah ditampilkan. -").addClass("noContent");
 							}
