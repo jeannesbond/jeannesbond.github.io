@@ -17,13 +17,13 @@
         <meta property="og:site_name" content="Gus Bryan">
 		<link rel="me" href="https://social.vivaldi.net/@jeannesbond">
         <link rel="stylesheet" type="text/css" href="./assets/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./assets/style.css">
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
         <link rel="manifest" href="./assets/site.webmanifest">
 		<title>Gus Bryan</title>
 	</head>
-	<style>.content { display: none; } .noContent { color: #000; background-color: transparent; pointer-events: none; border-style: none; } li { list-style: none; }</style>
 	<body class="d-flex flex-column vh-100 bg-light">
 		<div class="container font-monospace">
 			<div class="pt-3 border-bottom border-dark">
@@ -45,33 +45,7 @@
 		</div>
 		<script src="./assets/bootstrap.bundle.min.js"></script>
 		<script src="./assets/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$.ajax({
-					type: "GET",
-					url: "database.json",
-					dataType: "json",
-					success: function(data) {
-						$.each(data, function(index, item) {
-							var html = '';
-							html += '<li class="list-group-item bg-light content">';
-							html += '<h4><a href="blog/' + item.id + '/' + item.slug + '" class="text-decoration-none text-bg-light">' + item.judul + '</a></h4>';
-							html += '<small>' + item.tanggal + '</small>';
-							html += '</li>';
-							$('#list-group').append(html);
-						});
-						$(".content").slice(0, 8).show();
-						$("#loadMore").on("click", function(e){
-							e.preventDefault();
-							$(".content:hidden").slice(0, 8).slideDown();
-							if($(".content:hidden").length == 0) {
-								$("#loadMore").text("- Semua artikel sudah ditampilkan. -").addClass("noContent");
-							}
-						});
-					}
-				});
-			});
-		</script>
+		<script src="./assets/script.js"></script>
 	</body>
 	<footer class="mt-auto p-2 text-center">
 		<a href="https://vivaldi.com?pk_campaign=Banners&pk_kwd=728x90"><img src="https://vivaldi.com/buttons/files/vivaldi_browser_lg-alt-b.png" class="img-fluid mb-2" alt="Get Vivaldi Browser"></a>
