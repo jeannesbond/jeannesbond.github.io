@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jeannesbond.my.id/blog/6/mengacak-teks-menggunakan-javascript</loc>
+    <lastmod>2024-07-06</lastmod>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
     <loc>https://jeannesbond.my.id/blog/5/show-hide-password-dengan-bootstrap</loc>
     <lastmod>2024-06-30</lastmod>
     <priority>0.5</priority>

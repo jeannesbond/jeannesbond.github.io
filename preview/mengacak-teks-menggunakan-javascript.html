@@ -7,36 +7,47 @@
         <meta name="twitter:site" content="@jeannesbond">
         <meta property="og:type" content="article">
         <meta property="og:image" content="../assets/android-chrome-512x512.png">
-        <meta property="og:title" content="Menghitung Umur Menggunakan JavaScript - Gus Bryan">
-        <meta property="og:url" content="https://jeannesbond.my.id/preview/menghitung-umur-menggunakan-javasricpt.html">
-        <meta property="og:description" content="Menghitung Umur Menggunakan JavaScript">
+        <meta property="og:title" content="Mengacak Teks Menggunakan Javascript - Gus Bryan">
+        <meta property="og:url" content="https://jeannesbond.my.id/preview/mengacak-teks-menggunakan-javasricpt.html">
+        <meta property="og:description" content="Mengacak Teks Menggunakan Javascript">
         <meta property="og:site_name" content="Gus Bryan">
         <link rel="stylesheet" type="text/css" href="../assets/bootstrap.min.css">
         <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
         <link rel="manifest" href="../assets/site.webmanifest">
-        <title>Menghitung Umur Menggunakan JavaScript - Gus Bryan</title>
+        <title>Mengacak Teks Menggunakan Javascript - Gus Bryan</title>
 	</head>
 	<body class="d-flex flex-column vh-100 bg-light">
 		<div class="container font-monospace">
 			<div class="pt-3 border-bottom border-dark">
 				<figure class="text-center text-dark">
 					<blockquote class="blockquote">
-						<p class="h2">Menghitung Umur Menggunakan JavaScript</p>
+						<p class="h2">Mengacak Teks Menggunakan Javascript</p>
 					</blockquote>
 					<figcaption class="blockquote-footer text-dark">
 						Gus Bryan
 					</figcaption>
 				</figure>
 			</div>
-			<h3 class="my-3" id="age"></h3>
+			<h2 id="Teks">Ini teks yang akan diacak</h2>
 			<script src="../assets/bootstrap.bundle.min.js"></script>
 			<script>
-				var dob = new Date("05/21/1998");
-				var age = Math.floor((Date.now() - dob.getTime()) / 31536000000);
-				document.getElementById("age").innerHTML = `Umur: ${age} tahun`;
-			</script>
+				function shuffelWord (word){
+					var shuffledWord = '';
+					var charIndex = 0;
+					word = word.split('');
+					while(word.length > 0){
+						charIndex = word.length * Math.random() << 0;
+						shuffledWord += word[charIndex];
+						word.splice(charIndex,1);
+				}
+				return shuffledWord;
+				}
+				setInterval(function(){
+					document.querySelector("#Teks").textContent = shuffelWord(document.querySelector("#Teks").textContent);
+				},100)
+		</script>
 		</div>
 	</body>
 	<footer class="mt-auto p-2 text-center">

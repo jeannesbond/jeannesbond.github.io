@@ -1,5 +1,11 @@
 [
     {
+        "id": 6,
+		"slug": "mengacak-teks-menggunakan-javascript",
+        "judul": "Mengacak Teks menggunakan Javascript",
+        "tanggal": "6 Juli 2024"
+    },
+	{
         "id": 5,
 		"slug": "show-hide-password-dengan-bootstrap",
         "judul": "Show & Hide Password dengan Bootstrap",
